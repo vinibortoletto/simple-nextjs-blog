@@ -1,6 +1,6 @@
-import IPost from "../interfaces/IPost";
-import getRandomPosts from "../lib/getRandomPosts";
-import PostList from "./components/PostList";
+import { IPost } from "@/interfaces";
+import { getRandomPosts } from "@/lib";
+import { PostList } from "./components";
 
 export default async function Home() {
   const randomPosts: IPost[] = await getRandomPosts();

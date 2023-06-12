@@ -1,6 +1,7 @@
+import { IPost } from "@/interfaces";
 import getAllPosts from "./getAllPosts";
 
-export default async function getRandomPosts() {
+export default async function getRandomPosts(): Promise<IPost[]> {
   const posts = await getAllPosts();
   const randomPosts = [];
 

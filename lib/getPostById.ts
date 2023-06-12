@@ -1,4 +1,6 @@
-export default async function getPostById(postId: string) {
+import { IPost } from "@/interfaces";
+
+export default async function getPostById(postId: string): Promise<IPost> {
   const response = await fetch(
     `https://jsonplaceholder.typicode.com/posts/${postId}`
   );

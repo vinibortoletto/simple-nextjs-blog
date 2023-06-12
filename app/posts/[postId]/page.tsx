@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import IPost from "@/interfaces/IPost";
-import IUser from "@/interfaces/IUser";
-import getPostById from "@/lib/getPostById";
-import getUserById from "@/lib/getUserById";
+import { IPost, IUser } from "@/interfaces";
+import { getPostById, getUserById } from "@/lib/";
 
 interface IParams {
   params: { postId: string };

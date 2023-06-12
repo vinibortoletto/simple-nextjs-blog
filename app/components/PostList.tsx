@@ -1,6 +1,6 @@
 import Link from "next/link";
-import IPost from "../../interfaces/IPost";
-import getUserById from "../../lib/getUserById";
+import { IPost } from "@/interfaces";
+import { getUserById } from "@/lib";
 
 interface IProps {
   posts: IPost[];

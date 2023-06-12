@@ -1,4 +1,6 @@
-export default async function getAllPosts() {
+import { IPost } from "@/interfaces";
+
+export default async function getAllPosts(): Promise<IPost[]> {
   const response = await fetch("https://jsonplaceholder.typicode.com/posts");
 
   if (!response.ok) {
