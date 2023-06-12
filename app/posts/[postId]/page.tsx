@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import IPost from "@/interfaces/IPost";
 import IUser from "@/interfaces/IUser";
@@ -6,6 +7,17 @@ import getUserById from "@/lib/getUserById";
 
 interface IParams {
   params: { postId: string };
+}
+
+export async function generateMetadata({ params }: IParams): Promise<Metadata> {
+  const { postId } = params;
+  const { title, body, userId }: IPost = await getPostById(postId);
+  const user: IUser | undefined = await getUserById(userId);
+
+  return {
+    title: title,
+    description: `A blog post by ${user?.name}.`,
+  };
 }
 
 export default async function Post({ params }: IParams) {
