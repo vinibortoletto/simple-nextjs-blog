@@ -1,6 +1,6 @@
 # Simple Blog
 
-🛑 [Live demo](https://vb-simple-nextjs-blog.vercel.app/)
+🛑 [Live demo](https://vb-simple-blog.vercel.app/)
 
 Este projeto é um blog simples construído com Next.js, TypeScript, TailwindCSS e faz uso da API JSONPlaceholder (https://jsonplaceholder.typicode.com/) para obter os dados.
 
