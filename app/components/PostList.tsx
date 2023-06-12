@@ -18,14 +18,14 @@ export default function PostList(props: IProps) {
   return (
     <ul className="flex flex-col gap-6">
       {posts.map(async (post) => (
-        <div key={post.id} className="p-2 border-l-8 border-slate-900">
-          <Link href={`/posts/${post.id}`}>
+        <Link key={post.id} href={`/posts/${post.id}`}>
+          <div className="p-6 transition rounded-md shadow bg-slate-100 hover:shadow-md">
             <h2 className="text-2xl capitalize">{post.title}</h2>
             <p className="text-sm">
               Author: {await getPostAuthor(post.userId)}
             </p>
-          </Link>
-        </div>
+          </div>
+        </Link>
       ))}
     </ul>
   );
